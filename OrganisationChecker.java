@@ -28,7 +28,7 @@ public class OrganisationChecker extends ValidityChecker{
         }
 
         for(int i = 0; i < len; i++){
-            if((len == 13 || len == 11) && i == check){
+            if(i == check){
                 if (this.getId().charAt(i) != '-' ) {
                     return false; 
                 }
