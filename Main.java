@@ -90,8 +90,9 @@ public class Main {
         assert test == true;
 
         System.out.println("\n");
+        String cont = "";
         Scanner myObj = new Scanner(System.in);
-        while(true){
+        while(!(cont.equals("exit") || cont.equals("e"))){
             System.out.println("Enter 1 for personalnumber, 2 for samorningsnumber or 3 for organisationnumber");
             myObj = new Scanner(System.in);
             int opt = myObj.nextInt();
@@ -110,12 +111,9 @@ public class Main {
                 OrganisationChecker pc3 = new OrganisationChecker(numberString);
                 pc3.validation();
             }
-            System.out.println("Enter 1 to exit or 0 to continue");
+            System.out.println("Enter exit or e to quit the program.");
             myObj = new Scanner(System.in);
-            int cont = myObj.nextInt();
-            if(cont ==1){
-                break;
-            }
+            cont = myObj.nextLine().toLowerCase();
         }
     }
 } 
